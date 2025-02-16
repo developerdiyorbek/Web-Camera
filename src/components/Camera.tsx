@@ -64,7 +64,7 @@ const CameraCapture = () => {
           <img
             src={image}
             alt="Captured"
-            className="w-[500px] h-[440px] rounded-lg"
+            className="w-[500px] h-[400px] rounded-lg"
             width={400}
           />
         ) : (
