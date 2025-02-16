@@ -22,7 +22,7 @@ const CameraCapture = () => {
   return (
     <section className="container mx-auto max-md:px-5">
       <h1 className="text-3xl mb-5 text-center mt-3">Web camera</h1>
-      <div className="flex items-center gap-4 max-md:flex-col">
+      <div className="flex gap-4 max-md:flex-col">
         <div className="mx-auto">
           <div className="mb-4">
             {isCameraOn ? (
@@ -64,7 +64,7 @@ const CameraCapture = () => {
           <img
             src={image}
             alt="Captured"
-            className="w-[400px] rounded-lg"
+            className="w-[500px] h-[440px] rounded-lg"
             width={400}
           />
         ) : (
