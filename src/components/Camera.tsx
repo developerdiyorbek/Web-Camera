@@ -32,6 +32,7 @@ const CameraCapture = () => {
                 className="size-full rounded-lg"
                 width={400}
                 height={400}
+                mirrored={false}
               />
             ) : (
               <div className="size-[400px] flex items-center justify-center bg-gray-200 rounded-lg">
@@ -63,9 +64,8 @@ const CameraCapture = () => {
           <img
             src={image}
             alt="Captured"
-            className="size-[400px] rounded-lg"
+            className="w-[400px] rounded-lg"
             width={400}
-            height={400}
           />
         ) : (
           <div className="size-[400px] flex items-center justify-center bg-gray-200 rounded-lg">
