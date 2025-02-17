@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import { BiRefresh } from "react-icons/bi";
 import { FaCamera, FaImage } from "react-icons/fa";
 import Webcam from "react-webcam";
 
@@ -6,6 +7,7 @@ const CameraCapture = () => {
   const webcamRef = useRef<Webcam>(null);
   const [image, setImage] = useState<string | null>(null);
   const [isCameraOn, setIsCameraOn] = useState(true);
+  const [mirrored, setMirrored] = useState(true);
 
   const capturePhoto = () => {
     if (webcamRef.current) {
@@ -32,7 +34,7 @@ const CameraCapture = () => {
                 className="size-full rounded-lg"
                 width={400}
                 height={400}
-                mirrored={false}
+                mirrored={mirrored}
               />
             ) : (
               <div className="size-[400px] flex items-center justify-center bg-gray-200 rounded-lg">
@@ -56,6 +58,12 @@ const CameraCapture = () => {
               }`}
             >
               {isCameraOn ? "📷 Kamerani o‘chirish" : "📸 Kamerani yoqish"}
+            </button>
+            <button
+              onClick={() => setMirrored((prev) => !prev)}
+              className="hover:bg-gray-200 duration-150 p-3 rounded cursor-pointer"
+            >
+              <BiRefresh size={20} />
             </button>
           </div>
         </div>
